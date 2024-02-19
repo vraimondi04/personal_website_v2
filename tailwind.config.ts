@@ -8,6 +8,13 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      margin: {
+        "100v": "100vh",
+      },
+      height: {
+        "100v": "100vh",
+        "300v": "300vh"
+      },
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
         'gradient-conic':
