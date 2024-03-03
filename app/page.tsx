@@ -1,5 +1,5 @@
 "use client";
-import React from 'react'
+import React, { useState } from 'react'
 import Landing from "@/components/Landing";
 import Scene from "@/components/Scene";
 import Caption from "@/components/Caption"
@@ -13,16 +13,29 @@ import { a } from '@react-spring/web';
 // // })
 
 export default function Index() {
-  const [{background, fill}, set] = useSpring({ background: '#f0f0f0', fill: '#202020'}, [])
+  const [{background}, set] = useSpring({ background: '#f0f0f0'}, [])
+  const [darkMode, setDarkMode] = useState(false);
+
+  const updateDarkMode = () => {
+    setDarkMode(!darkMode);
+  }
+
+  // TODO: Refactor the main style in the global style sheet --> try to add it with tailwind here
+
   return (
     <>
-    <a.main style={{ background }}>
+    <a.main style={{ background } as any}>
+      <Caption darkMode={darkMode} />
+
       <Canvas className="canvas">
-        <Scene setBg={set} />
+        <Scene setBg={set} handleMode={updateDarkMode} />
       </Canvas>
-      <Caption fill={fill} />
-      {/* <Landing /> */}
     </a.main>
+    <div className='flex flex-row'>
+      {/* <Landing /> */}
+      {/* <Caption darkMode={darkMode} />
+      <Caption darkMode={darkMode} /> */}
+    </div>
     </>
   );
 }

@@ -8,7 +8,7 @@ import { a } from '@react-spring/three'
 
 const animatedStar = a(MeshTransmissionMaterial);
 
-export default function Scene({ setBg }: any) {
+export default function Scene({ setBg, handleMode }: any) {
     const { nodes } = useGLTF('/medias/star_v2.glb');
     const star = useRef(null);
     const star2 = useRef(null);
@@ -20,16 +20,13 @@ export default function Scene({ setBg }: any) {
         document.body.style.cursor = hovered ? 'none' : ''
     }, [hovered])
 
-    const [{ wobble, wobble2, color }] = useSpring(
+    const [{ wobble, wobble2 }] = useSpring(
         {
             wobble: down ? 6.2 : hovered ? 6.05 : 6,
             wobble2: down ? 3.7 : hovered ? 3.55 : 3.5,
-            color: hovered ? '#E8B059' : mode ? '#202020' : 'white',
         },
         [mode, hovered, down]
     )
-
-    //TODO ADD Light onto the Star
 
     return (
     <>
@@ -44,8 +41,9 @@ export default function Scene({ setBg }: any) {
                     onPointerDown={() => setDown(true)}
                     onPointerUp={() => {
                         setDown(false)
+                        handleMode()
                         setMode(!mode)
-                        setBg({ background: !mode ? '#202020' : '#f0f0f0', fill: !mode ? '#f0f0f0' : '#202020' })
+                        setBg({ background: !mode ? '#202020' : '#f0f0f0'})
                     }}>
                     <MeshTransmissionMaterial thickness={0.2} roughness={0} transmission={1} ior={1.2} chromaticAberration={0.6} backside={true}/>
                 </a.mesh>

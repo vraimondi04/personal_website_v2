@@ -1,10 +1,14 @@
 import React from 'react'
 import { a } from '@react-spring/web'
 
-export default function Caption({ fill }: any) {
+export default function Caption({ darkMode }: any) {
+  
   return (
-    <div className='flex flex-1 order-1 pointer-events-none justify-center items-center'>
-        <p className="font-bold text-6xl font-serif text-[#E8B059]">- Vincent -</p>
+    <div className='flex flex-1 flex-col pointer-events-none justify-center items-center'>
+      <div className='font-bold text-6xl font-serif'>
+        <p className="flex justify-center text-[#E8B059]">- Vincent -</p>
+        <p className={darkMode === true ? "text-[#f0f0f0]" : "text-[#202020]"}>Software Dev + <span className='text-transparent bg-clip-text bg-gradient-to-r from-red-500 via-pink-500 to-blue-500'>Wizard</span></p>
+      </div>
     </div>
 
   )
