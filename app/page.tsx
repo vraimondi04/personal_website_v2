@@ -1,32 +1,28 @@
 "use client";
+import React from 'react'
 import Landing from "@/components/Landing";
-import dynamic from 'next/dynamic'
+import Scene from "@/components/Scene";
+import Caption from "@/components/Caption"
+import { Canvas } from '@react-three/fiber';
+import { useSpring } from '@react-spring/core';
+import { a } from '@react-spring/web';
+// import dynamic from 'next/dynamic';
 
-const Scene = dynamic(() => import('@/components/Scene'), {
-    ssr: false,
-})
-
-const sectionNames = ['Hi, I\'\m Vincent', 'Experience', 'Projects', 'About'];
+// // const Scene = dynamic(() => import('@/components/Scene'), {
+// //     ssr: false,
+// // })
 
 export default function Index() {
+  const [{background, fill}, set] = useSpring({ background: '#f0f0f0', fill: '#202020'}, [])
   return (
     <>
-    <div className="flex h-90v sm:h-screen bg-[#171616]">
-      {/* <div className="h-4/6"> */}
-        <Scene sectionName={sectionNames[0]} />
-      {/* </div> */}
-      {/* <p className="text-4xl m-10 text-white">hi</p> */}
-    </div>
-    <div className="flex sm:h-screen bg-[#171616]">
-      <Scene sectionName={sectionNames[1]} />
-    </div>
-    <div className="flex sm:h-screen bg-[#171616]">
-      <Scene sectionName={sectionNames[2]} />
-    </div>
-    <div className="flex sm:h-screen bg-[#171616]">
-      <Scene sectionName={sectionNames[3]} />
-    </div>
-    <Landing />
+    <a.main style={{ background }}>
+      <Canvas className="canvas">
+        <Scene setBg={set} />
+      </Canvas>
+      <Caption fill={fill} />
+      {/* <Landing /> */}
+    </a.main>
     </>
   );
 }
