@@ -1,6 +1,6 @@
 "use client";
 import React, { useState } from 'react'
-import Landing from "@/components/Landing";
+import Experience from "@/components/Experience";
 import Scene from "@/components/Scene";
 import Caption from "@/components/Caption"
 import { Canvas } from '@react-three/fiber';
@@ -27,15 +27,18 @@ export default function Index() {
     <a.main style={{ background } as any}>
       <Caption darkMode={darkMode} />
 
-      <Canvas className="canvas">
+      <Canvas className="flex flex-1 h-screen">
         <Scene setBg={set} handleMode={updateDarkMode} />
       </Canvas>
     </a.main>
-    <div className='flex flex-row'>
-      {/* <Landing /> */}
-      {/* <Caption darkMode={darkMode} />
-      <Caption darkMode={darkMode} /> */}
-    </div>
+    <a.div style={{ background } as any}>
+      <p className="text-[#597ae8] font-bold text-6xl font-serif ml-60">Experiences</p>
+      <a.div className='flex flex-row mt-16'>
+      <Experience darkMode={darkMode} />
+      <Experience darkMode={darkMode} />
+      </a.div>
+      
+    </a.div>
     </>
   );
 }
