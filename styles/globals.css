@@ -10,6 +10,34 @@ html {
   scroll-behavior: smooth;
 }
 
+html,
+body,
+#root,
+main {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+main {
+  background: #f0f0f0;
+  display: flex;
+  flex-direction: row;
+}
+
+body {
+  cursor: url('/medias/ellipse.svg');
+  cursor: -webkit-image-set(url('/medias/ellipse.svg') 1x, url('/medias/ellipse.svg') 2x), pointer;
+}
+
+.canvas {
+  display: flex;
+  flex: 1;
+  height: 100%;
+  /* order: 2; */
+}
+
 /*
 :root {
   --foreground-rgb: 0, 0, 0;
