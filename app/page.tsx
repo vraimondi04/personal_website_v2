@@ -35,7 +35,7 @@ export default function Index() {
       <p className="text-[#597ae8] font-bold text-6xl font-serif ml-60">Experiences</p>
       <a.div className='flex flex-row mt-16'>
       <Experience darkMode={darkMode} />
-      <Experience darkMode={darkMode} />
+      {/* <Experience darkMode={darkMode} /> */}
       </a.div>
       
     </a.div>
