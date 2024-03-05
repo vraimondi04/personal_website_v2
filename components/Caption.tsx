@@ -15,6 +15,7 @@ export default function Caption({ darkMode }: any) {
                 " Wizard",
                 4000,
                 " Pokemon Trainer",
+                4000,
               ]}
               speed={65}
               deletionSpeed={65}
