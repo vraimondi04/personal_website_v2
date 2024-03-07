@@ -32,8 +32,8 @@ export default function Index() {
       </Canvas>
     </a.main>
     <a.div style={{ background } as any}>
-      <p className="text-[#597ae8] font-bold text-6xl font-serif ml-60">Experiences</p>
-      <a.div className='flex flex-row mt-16'>
+      <p className="text-[#597ae8] font-bold text-6xl font-serif ml-32 2xl:ml-60">Experience</p>
+      <a.div className='flex flex-row mt-4'>
       <Experience darkMode={darkMode} />
       {/* <Experience darkMode={darkMode} /> */}
       </a.div>

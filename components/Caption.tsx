@@ -3,6 +3,8 @@ import { TypeAnimation } from 'react-type-animation'
 import { a } from '@react-spring/web'
 
 export default function Caption({ darkMode }: any) {
+
+    // TODO: Fix styling sizing for Laptop / Mobile Screens --> try changing text size
   
   return (
     <div className='flex flex-1 flex-col pointer-events-none justify-center items-center'>
@@ -17,8 +19,8 @@ export default function Caption({ darkMode }: any) {
                 " Pokemon Trainer",
                 4000,
               ]}
-              speed={65}
-              deletionSpeed={65}
+              speed={45}
+              deletionSpeed={45}
               cursor={true}
               repeat={Infinity}
               preRenderFirstString={true}
