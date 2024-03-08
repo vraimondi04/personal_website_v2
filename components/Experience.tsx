@@ -25,11 +25,11 @@ export default function Experience({ darkMode }: any) {
   ]
   
   return (
-    <div className='flex flex-1 flex-col pointer-events-none justify-center items-center'>
+    <div className='flex w-2/4 flex-col justify-center items-center'>
 
       <div className='rounded-md bg-slate-200 w-5/6 m-4 flex flex-col justify-between'>
         {jobs.map(({title, employer, timeFrame, image}) => (
-            <div className='flex mb-6' key={title}>
+            <div className='flex mb-6 hover:bg-red-500 rounded-md' key={title}>
                 <Image className='rounded-md mr-4' src={image} width={200} height={200} alt='UPS Store Logo'></Image>
     
                 <span className='font-serif'>
