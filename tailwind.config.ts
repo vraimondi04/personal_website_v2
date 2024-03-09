@@ -8,6 +8,10 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      fontSize: {
+        '4.5xl': '2.5rem',
+        '2.5xl': '1.75rem',
+      },
       margin: {
         "100v": "100vh",
       },

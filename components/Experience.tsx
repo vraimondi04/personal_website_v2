@@ -27,15 +27,15 @@ export default function Experience({ darkMode }: any) {
   return (
     <div className='flex w-2/4 flex-col justify-center items-center'>
 
-      <div className='rounded-md bg-slate-200 w-5/6 m-4 flex flex-col justify-between'>
+      <div className='rounded-md bg-slate-200 w-11/12 m-4 flex flex-col justify-between'>
         {jobs.map(({title, employer, timeFrame, image}) => (
             <div className='flex mb-6 hover:bg-red-500 rounded-md' key={title}>
                 <Image className='rounded-md mr-4' src={image} width={200} height={200} alt='UPS Store Logo'></Image>
     
                 <span className='font-serif'>
-                <p className={darkMode === true ? "text-[#f0f0f0] font-bold text-4xl" : "text-[#202020] font-bold text-4xl"}>{title}</p>
-                <p className={darkMode === true ? "text-[#f0f0f0] font-bold text-3xl" : "text-[#202020] font-bold text-3xl"}>{employer}</p>
-                <p className={darkMode === true ? "text-[#f0f0f0] font-medium text-3xl" : "text-[#202020] font-medium text-3xl"}>{timeFrame}</p>
+                <p className={darkMode === true ? "text-[#f0f0f0] font-bold text-xl lg:text-2xl 2xl:text-3xl" : "text-[#202020] font-bold text-xl lg:text-2xl 2xl:text-3xl"}>{title}</p>
+                <p className={darkMode === true ? "text-[#f0f0f0] font-bold text-lg lg:text-xl 2xl:text-2xl" : "text-[#202020] font-bold text-lg lg:text-xl 2xl:text-2xl"}>{employer}</p>
+                <p className={darkMode === true ? "text-[#f0f0f0] font-medium text-lg lg:text-xl 2xl:text-2xl" : "text-[#202020] font-medium text-lg lg:text-xl 2xl:text-2xl"}>{timeFrame}</p>
                 </span>
             </div>
         ))}

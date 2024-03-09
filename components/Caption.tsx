@@ -8,8 +8,8 @@ export default function Caption({ darkMode }: any) {
   
   return (
     <div className='flex flex-1 flex-col pointer-events-none justify-center items-center'>
-      <div className='font-bold text-6xl font-serif'>
-        <p className="flex justify-center text-[#E8B059]">- Hi, I'm Vincent -</p>
+      <div className='flex flex-col items-center justify-center font-bold lg:text-4.5xl 2xl:text-6xl text-3xl font-serif'>
+        <p className="text-[#E8B059]">- Hi, I'm Vincent -</p>
         <p className={darkMode === true ? "text-[#f0f0f0]" : "text-[#202020]"}>Software Dev +
           <span className=''>
             <TypeAnimation 
