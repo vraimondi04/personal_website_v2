@@ -2,9 +2,9 @@ import React from 'react'
 import Image from 'next/image'
 import UPS_Store from '@/public/medias/the_ups_store_logo.jpeg'
 import NM from '@/public/medias/northwestern_mutual_logo.jpeg'
-import { FaAngular } from "react-icons/fa";
-import { SiDotnet } from "react-icons/si";
-import { FaReact } from "react-icons/fa";
+import { FaAngular, FaReact, FaNode, FaDocker, FaAws } from "react-icons/fa";
+import { SiMicrosoftazure, SiCsharp, SiDotnet, SiMicrosoftsqlserver, SiMongodb } from "react-icons/si";
+import { BiLogoTypescript } from "react-icons/bi";
 import { a } from '@react-spring/web'
 
 export default function Experience({ darkMode }: any) {
@@ -17,14 +17,14 @@ export default function Experience({ darkMode }: any) {
         employer: 'The UPS Store',
         timeFrame: 'Aug 2023 - Present',
         image: UPS_Store,
-        tech: [FaAngular, SiDotnet]
+        tech: [FaAngular, SiDotnet, SiMicrosoftazure, BiLogoTypescript, SiCsharp, SiMicrosoftsqlserver]
     },
     {
         title: 'Software Engineering Intern',
         employer: 'Northwestern Mutual',
         timeFrame: 'June 2022 - Sep 2022',
         image: NM,
-        tech: [FaReact]
+        tech: [FaReact, FaNode, FaAws, FaDocker, BiLogoTypescript, SiMongodb ]
     }
 
   ]
