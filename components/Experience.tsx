@@ -33,13 +33,13 @@ export default function Experience({ darkMode }: any) {
 
             <div className='rounded-md bg-slate-200 w-full m-4 ml-24 flex flex-col justify-between'>
                 {jobs.map(({title, employer, timeFrame, image, tech}) => (
-                    <div className='flex mb-6 hover:bg-red-500 rounded-md' key={title}>
+                    <div className='flex mb-6 last:mb-0 hover:bg-red-500 rounded-md' key={title}>
                         <Image className='rounded-md mr-4' src={image} width={200} height={200} alt='Experience Image'></Image>
             
                         <span className='font-serif'>
-                            <p className={darkMode === true ? "text-[#f0f0f0] font-bold text-xl lg:text-2xl 2xl:text-4xl" : "text-[#202020] font-bold text-xl lg:text-2xl 2xl:text-4xl"}>{title}</p>
-                            <p className={darkMode === true ? "text-[#f0f0f0] font-bold text-lg lg:text-xl 2xl:text-3xl" : "text-[#202020] font-bold text-lg lg:text-xl 2xl:text-3xl"}>{employer}</p>
-                            <p className={darkMode === true ? "text-[#f0f0f0] font-medium text-lg lg:text-xl 2xl:text-3xl" : "text-[#202020] font-medium text-lg lg:text-xl 2xl:text-3xl"}>{timeFrame}</p>
+                            <p className="text-[#202020] font-bold text-xl lg:text-2xl 2xl:text-4xl">{title}</p>
+                            <p className="text-[#202020] font-bold text-lg lg:text-xl 2xl:text-3xl">{employer}</p>
+                            <p className="text-[#202020] font-medium text-lg lg:text-xl 2xl:text-3xl">{timeFrame}</p>
 
                             <div className='flex mt-10 text-4xl'>
                                 {tech.map((Icon, index) => (
