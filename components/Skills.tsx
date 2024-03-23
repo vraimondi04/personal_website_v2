@@ -1,6 +1,6 @@
 import React from 'react'
 import Image from 'next/image'
-
+import ListStar from '@/public/medias/Star-Lists.svg'
 import { a } from '@react-spring/web'
 
 export default function Skills({ darkMode }: any) {
@@ -36,21 +36,30 @@ export default function Skills({ darkMode }: any) {
                 <div className='flex flex-col'>
                     <p className="font-serif text-[#202020] font-bold text-xl lg:text-2xl 2xl:text-4xl">Languages</p>
                     {languages.map(({name}) => (
-                        <p className='font-serif text-[#202020] font-medium text-lg lg:text-xl 2xl:text-3xl'>{name}</p>
+                        <div className='flex'>
+                            <Image className='rounded-md mr-4' src={ListStar} width={20} height={20} alt='List Star'></Image>
+                            <p className='font-serif text-[#202020] font-medium text-lg lg:text-xl 2xl:text-3xl'>{name}</p>
+                        </div>
                     ))}
                 </div>
 
                 <div className='flex flex-col'>
                     <p className="font-serif text-[#202020] font-bold text-xl lg:text-2xl 2xl:text-4xl">Developer Tools</p>
                     {developerTools.map(({name}) => (
-                        <p className='font-serif text-[#202020] font-medium text-lg lg:text-xl 2xl:text-3xl'>{name}</p>
+                        <div className='flex'>
+                            <Image className='rounded-md mr-4' src={ListStar} width={20} height={20} alt='List Star'></Image>
+                            <p className='font-serif text-[#202020] font-medium text-lg lg:text-xl 2xl:text-3xl'>{name}</p>
+                        </div>
                     ))}
                 </div>
 
                 <div className='flex flex-col'>
                     <p className="font-serif text-[#202020] font-bold text-xl lg:text-2xl 2xl:text-4xl">Frameworks</p>
                     {frameworks.map(({name}) => (
-                        <p className='font-serif text-[#202020] font-medium text-lg lg:text-xl 2xl:text-3xl'>{name}</p>
+                        <div className='flex'>
+                            <Image className='rounded-md mr-4' src={ListStar} width={20} height={20} alt='List Star'></Image>
+                            <p className='font-serif text-[#202020] font-medium text-lg lg:text-xl 2xl:text-3xl'>{name}</p>
+                        </div>
                     ))}
                 </div>
             </div>
