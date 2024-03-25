@@ -1,6 +1,6 @@
 import React from 'react'
 import Image from 'next/image'
-import Yummy from '@/public/medias/yummy-photo.png'
+import Yummy from '@/public/medias/yummy-project.png'
 import { a } from '@react-spring/web'
 
 export default function Projects({ darkMode }: any) {
