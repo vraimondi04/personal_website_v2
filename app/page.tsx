@@ -4,6 +4,7 @@ import Experience from "@/components/Experience";
 import Scene from "@/components/Scene";
 import Caption from "@/components/Caption";
 import Skills from "@/components/Skills";
+import Projects from '@/components/Projects';
 import { Canvas } from '@react-three/fiber';
 import { useSpring } from '@react-spring/core';
 import { a } from '@react-spring/web';
@@ -32,8 +33,9 @@ export default function Index() {
         <Scene setBg={set} handleMode={updateDarkMode} />
       </Canvas>
     </a.main>
+
     <a.div className="flex" style={{ background } as any}>
-      <a.div className="mr-20">
+      <a.div className="lg:mr-20 2xl:mr-52">
         <p className="text-[#597ae8] font-bold text-3xl lg:text-4.5xl 2xl:text-6xl font-serif lg:ml-16 2xl:ml-12">Experience</p>
         <a.div className='flex flex-row mt-4'>
           <Experience darkMode={darkMode} />
@@ -44,6 +46,16 @@ export default function Index() {
         <p className="text-[#597ae8] font-bold text-3xl lg:text-4.5xl 2xl:text-6xl font-serif lg:ml-16 2xl:ml-0">Skills</p>
         <a.div className='flex flex-row mt-4'>
           <Skills darkMode={darkMode} />
+        </a.div>
+      </a.div>
+
+    </a.div>
+
+    <a.div className="flex pt-8" style={{ background } as any}>
+      <a.div>
+        <p className="text-[#597ae8] font-bold text-3xl lg:text-4.5xl 2xl:text-6xl font-serif lg:ml-16 2xl:ml-12">Projects</p>
+        <a.div className='flex flex-row mt-4'>
+          <Projects darkMode={darkMode} />
         </a.div>
       </a.div>
 
