@@ -31,7 +31,7 @@ export default function Experience({ darkMode }: any) {
     <>
         <div className='flex flex-col justify-center items-center'>
 
-            <div className='rounded-md bg-slate-200 w-full m-4 ml-24 flex flex-col justify-between'>
+            <div className='rounded-md bg-slate-200 w-full m-4 ml-24 flex flex-col'>
                 {jobs.map(({title, employer, timeFrame, image, tech}) => (
                     <div className='flex mb-6 last:mb-0 hover:bg-red-500 rounded-md' key={title}>
                         <Image className='rounded-md mr-4' src={image} width={200} height={200} alt='Experience Image'></Image>

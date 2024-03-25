@@ -34,7 +34,7 @@ export default function Index() {
       </Canvas>
     </a.main>
 
-    <a.div className="flex" style={{ background } as any}>
+    <a.div className="flex justify-evenly" style={{ background } as any}>
       <a.div className="lg:mr-20 2xl:mr-52">
         <p className="text-[#597ae8] font-bold text-3xl lg:text-4.5xl 2xl:text-6xl font-serif lg:ml-16 2xl:ml-12">Experience</p>
         <a.div className='flex flex-row mt-4'>
@@ -51,9 +51,9 @@ export default function Index() {
 
     </a.div>
 
-    <a.div className="flex pt-8" style={{ background } as any}>
+    <a.div className="flex pt-16" style={{ background } as any}>
       <a.div>
-        <p className="text-[#597ae8] font-bold text-3xl lg:text-4.5xl 2xl:text-6xl font-serif lg:ml-16 2xl:ml-12">Projects</p>
+        <p className="text-[#597ae8] font-bold text-3xl lg:text-4.5xl 2xl:text-6xl font-serif lg:ml-16 2xl:ml-44">Projects</p>
         <a.div className='flex flex-row mt-4'>
           <Projects darkMode={darkMode} />
         </a.div>

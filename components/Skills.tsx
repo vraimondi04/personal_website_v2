@@ -32,7 +32,7 @@ export default function Skills({ darkMode }: any) {
   return (
     <>
         <div className='flex flex-col justify-center items-center'>
-            <div className='rounded-md bg-slate-200 w-full m-4 flex justify-between gap-16 pb-28'>
+            <div className='rounded-md bg-slate-200 w-full m-4 flex gap-16 pb-28'>
                 <div className='flex flex-col ml-3'>
                     <p className="font-serif text-[#202020] font-bold text-xl lg:text-2xl 2xl:text-4xl mb-3">Languages</p>
                     {languages.map(({name}) => (

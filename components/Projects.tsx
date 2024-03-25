@@ -8,7 +8,7 @@ export default function Projects({ darkMode }: any) {
   const projects = [
     {
         title: 'ACM Membership Portal',
-        description: 'Student portal to officiate membership, track participation, and provide workshop resources',
+        description: 'Student portal + admin dashboard to officiate membership, track participation, and provide workshop resources',
         image: Yummy,
         tech: []
     },
@@ -23,12 +23,12 @@ export default function Projects({ darkMode }: any) {
   
   return (
     <>
-        <div className='rounded-md m-4 ml-12 flex justify-between'>
+        <div className='rounded-md m-4 flex justify-evenly'>
             {projects.map(({title, image, description, tech}) => (
-                <div className='bg-slate-200 flex flex-col w-2/4 items-center mb-6 last:mb-0 hover:bg-red-500 rounded-md' key={title}>
-                    <Image className='flex rounded-md mr-4' src={image} width={800} height={800} alt='Project Image'></Image>
+                <div className='bg-slate-200 flex flex-col w-2/5 items-center mb-6 hover:bg-red-500 rounded-md' key={title}>
+                    <Image className='flex rounded-md m-4' src={image} width={800} height={800} alt='Project Image'></Image>
         
-                    <span className='font-serif'>
+                    <span className='m-4 2xl:mx-20 font-serif'>
                         <p className="text-[#202020] font-bold text-xl lg:text-2xl 2xl:text-4xl">{title}</p>
                         <p className="text-[#202020] font-bold text-lg lg:text-xl 2xl:text-3xl">{description}</p>
 
