@@ -1,6 +1,7 @@
 import React from 'react'
 import Image from 'next/image'
 import Yummy from '@/public/medias/yummy-project.png'
+import YummyTest from '@/public/medias/yummy-test.gif'
 import MembershipPortal from '@/public/medias/membership-portal.png'
 import { a } from '@react-spring/web'
 
