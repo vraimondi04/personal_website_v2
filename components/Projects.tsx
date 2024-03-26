@@ -37,7 +37,7 @@ export default function Projects({ darkMode }: any) {
 
                         <div className='flex mt-8 text-4xl'>
                             {tech.map((Icon, index) => (
-                                <Icon className='mr-8'></Icon>
+                                <Icon className='mr-8' key={index}></Icon>
                             ))}
                         </div>
                     </span>
