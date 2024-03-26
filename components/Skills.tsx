@@ -28,11 +28,17 @@ export default function Skills({ darkMode }: any) {
         { name: 'Next.js' },
         { name: 'TailwindCSS' },
     ]
+
+    const currentlyLearning = [
+        { name: 'AR Development'},
+        { name: 'React Native + Expo' },
+        { name: 'CUDA' }
+    ]
   
   return (
     <>
-        <div className='flex flex-col justify-center items-center'>
-            <div className='rounded-md bg-slate-200 lg:w-11/12 2xl:w-full m-4 flex gap-16 lg:mr-16 lg:pb-44 2xl:pb-28'>
+        <div className='flex flex-col justify-center items-center rounded-md bg-slate-200 lg:w-11/12 2xl:w-full m-4'>
+            <div className='flex gap-16 lg:pb-6 2xl:pb-4'>
                 <div className='flex flex-col ml-3'>
                     <p className="font-serif text-[#202020] font-bold text-xl lg:text-2xl 2xl:text-4xl mb-3">Languages</p>
                     {languages.map(({name}) => (
@@ -63,6 +69,15 @@ export default function Skills({ darkMode }: any) {
                     ))}
                 </div>
             </div>
+            <div className='flex flex-col mb-8'>
+                    <p className="font-serif text-[#202020] font-bold text-xl lg:text-2xl 2xl:text-4xl mb-3">Things I am currently learning</p>
+                    {currentlyLearning.map(({name}) => (
+                        <div className='flex'>
+                            <Image className='rounded-md mr-4' src={ListStar} width={20} height={20} alt='List Star'></Image>
+                            <p className='font-serif text-[#202020] font-medium text-lg lg:text-xl 2xl:text-3xl'>{name}</p>
+                        </div>
+                    ))}
+                </div>
         </div>
     </>
   )
