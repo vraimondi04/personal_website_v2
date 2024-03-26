@@ -3,36 +3,38 @@ import { useRef, useEffect } from "react";
 import styles from "../styles/page.module.css";
 
 export default function Landing() {
-  const container = useRef(null);
-  const stickyMask = useRef(null);
-  const initialMaskSize = 0.4;
-  const targetMaskSize = 50;
-  const easing = 0.15;
-  let easedScrollProgress = 0;
+  // TODO: Fix this Component
 
-  useEffect(() => {
-    requestAnimationFrame(animate);
-  }, []);
+  // const container = useRef(null);
+  // const stickyMask = useRef(null);
+  // const initialMaskSize = 0.4;
+  // const targetMaskSize = 50;
+  // const easing = 0.15;
+  // let easedScrollProgress = 0;
 
-  const animate = () => {
-    const maskSizeProgress = targetMaskSize * getScrollProgress();
-    stickyMask.current.style.webkitMaskSize =
-      (initialMaskSize + maskSizeProgress) * 100 + "%";
-    requestAnimationFrame(animate);
-  };
+  // useEffect(() => {
+  //   requestAnimationFrame(animate);
+  // }, []);
 
-  const getScrollProgress = () => {
-    const scrollProgress =
-      stickyMask.current.offsetTop /
-      (container.current.getBoundingClientRect().height - window.innerHeight);
-    const delta = scrollProgress - easedScrollProgress;
-    easedScrollProgress += delta * easing;
-    return easedScrollProgress;
-  };
+  // const animate = () => {
+  //   const maskSizeProgress = targetMaskSize * getScrollProgress();
+  //   stickyMask.current.style.webkitMaskSize =
+  //     (initialMaskSize + maskSizeProgress) * 100 + "%";
+  //   requestAnimationFrame(animate);
+  // };
+
+  // const getScrollProgress = () => {
+  //   const scrollProgress =
+  //     stickyMask.current.offsetTop /
+  //     (container.current.getBoundingClientRect().height - window.innerHeight);
+  //   const delta = scrollProgress - easedScrollProgress;
+  //   easedScrollProgress += delta * easing;
+  //   return easedScrollProgress;
+  // };
 
   return (
     <>
-      <div className={styles.main}>
+      {/* <div className={styles.main}>
         <div ref={container} className={styles.container}>
           <div ref={stickyMask} className={styles.stickyMask}>
             <video autoPlay muted loop>
@@ -40,7 +42,7 @@ export default function Landing() {
             </video>
           </div>
         </div>
-      </div>
+      </div> */}
     </>
   );
 }
