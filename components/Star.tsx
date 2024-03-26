@@ -2,7 +2,9 @@ import React, { useRef } from 'react';
 import { useGLTF, Text, MeshTransmissionMaterial, Float } from "@react-three/drei";
 import { useFrame, useThree } from '@react-three/fiber';
 
-export default function Star({ sectionName }) {
+//TODO: Instead of explicitly giving sectionName an interface for the attributes (if this component will be used later)
+
+export default function Star({ sectionName }: { sectionName: any }) {
     const { nodes } = useGLTF('/medias/star_v2.glb');
     const { viewport } = useThree()
     const star = useRef([]) as any;
