@@ -70,7 +70,7 @@ export default function Skills({ darkMode }: any) {
                 </div>
             </div>
             <div className='flex flex-col ml-3 lg:ml-0 mb-8'>
-                    <p className="font-serif text-[#202020] font-bold text-xl lg:text-2xl 2xl:text-4xl mt-6 lg:mt-0 mb-3">Things I am currently learning</p>
+                    <p className="font-serif text-[#202020] font-bold text-xl lg:text-2xl 2xl:text-4xl mr-3 mt-6 lg:mt-0 mb-3">Things I am currently learning</p>
                     {currentlyLearning.map(({name}) => (
                         <div className='flex' key={name}>
                             <Image className='rounded-md mr-4' src={ListStar} width={20} height={20} alt='List Star'></Image>

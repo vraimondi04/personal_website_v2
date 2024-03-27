@@ -51,7 +51,7 @@ export default function Index() {
 
     </a.div>
 
-    <a.div className="flex pt-16" style={{ background } as any}>
+    <a.div className="flex pt-4 lg:pt-16" style={{ background } as any}>
       <a.div>
         <p className="text-[#597ae8] font-bold text-3xl lg:text-4.5xl 2xl:text-6xl font-serif ml-4 lg:ml-16 2xl:ml-44">Projects</p>
         <a.div className='flex flex-row mt-4'>

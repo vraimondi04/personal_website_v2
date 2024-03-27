@@ -31,17 +31,20 @@ export default function Experience({ darkMode }: any) {
     <>
         <div className='flex flex-col justify-center items-center'>
 
-            <div className='rounded-md bg-slate-200 w-11/12 lg:w-11/12 2xl:w-full m-4 lg:ml-24 flex flex-col'>
+            <div className='rounded-md bg-slate-200 w-11/12 lg:w-11/12 2xl:w-full m-4 lg:ml-24 flex flex-col mb-8'>
                 {jobs.map(({title, employer, timeFrame, image, tech}) => (
                     <div className='flex mb-6 last:mb-0 rounded-md' key={title}>
-                        <Image className='rounded-md mr-4' src={image} width={200} height={200} alt='Experience Image'></Image>
+                        <Image className='hidden lg:flex rounded-md mr-4' src={image} width={200} height={200} alt='Experience Image'></Image>
             
                         <span className='font-serif'>
+                            <Image className='lg:hidden rounded-md mr-4' src={image} width={140} height={200} alt='Experience Image'></Image>
+                        </span>
+                        <span className='font-serif pl-2'>
                             <p className="text-[#202020] font-bold text-xl lg:text-2xl 2xl:text-4xl">{title}</p>
                             <p className="text-[#202020] font-bold text-lg lg:text-xl 2xl:text-3xl">{employer}</p>
                             <p className="text-[#202020] font-medium text-lg lg:text-xl 2xl:text-3xl">{timeFrame}</p>
 
-                            <div className='flex mt-10 text-4xl'>
+                            <div className='grid grid-cols-3 lg:flex mt-10 text-4xl'>
                                 {tech.map((Icon, index) => (
                                     <Icon className='mr-8' key={index}></Icon>
                                 ))}
