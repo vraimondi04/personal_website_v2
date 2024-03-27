@@ -37,8 +37,8 @@ export default function Skills({ darkMode }: any) {
   
   return (
     <>
-        <div className='flex flex-col justify-center items-center rounded-md bg-slate-200 lg:w-11/12 2xl:w-full m-4'>
-            <div className='flex gap-16 lg:pb-6 2xl:pb-4'>
+        <div className='flex flex-col justify-center lg:items-center rounded-md bg-slate-200 lg:w-11/12 2xl:w-full m-4'>
+            <div className='flex flex-col lg:flex-row gap-6 lg:gap-16 lg:pb-6 2xl:pb-4'>
                 <div className='flex flex-col ml-3'>
                     <p className="font-serif text-[#202020] font-bold text-xl lg:text-2xl 2xl:text-4xl mb-3">Languages</p>
                     {languages.map(({name}) => (
@@ -49,7 +49,7 @@ export default function Skills({ darkMode }: any) {
                     ))}
                 </div>
 
-                <div className='flex flex-col'>
+                <div className='flex flex-col ml-3 lg:ml-0'>
                     <p className="font-serif text-[#202020] font-bold text-xl lg:text-2xl 2xl:text-4xl mb-3">Developer Tools</p>
                     {developerTools.map(({name}) => (
                         <div className='flex' key={name}>
@@ -59,7 +59,7 @@ export default function Skills({ darkMode }: any) {
                     ))}
                 </div>
 
-                <div className='flex flex-col mr-3'>
+                <div className='flex flex-col ml-3 lg:ml-0 mr-3'>
                     <p className="font-serif text-[#202020] font-bold text-xl lg:text-2xl 2xl:text-4xl mb-3">Frameworks</p>
                     {frameworks.map(({name}) => (
                         <div className='flex' key={name}>
@@ -69,8 +69,8 @@ export default function Skills({ darkMode }: any) {
                     ))}
                 </div>
             </div>
-            <div className='flex flex-col mb-8'>
-                    <p className="font-serif text-[#202020] font-bold text-xl lg:text-2xl 2xl:text-4xl mb-3">Things I am currently learning</p>
+            <div className='flex flex-col ml-3 lg:ml-0 mb-8'>
+                    <p className="font-serif text-[#202020] font-bold text-xl lg:text-2xl 2xl:text-4xl mt-6 lg:mt-0 mb-3">Things I am currently learning</p>
                     {currentlyLearning.map(({name}) => (
                         <div className='flex' key={name}>
                             <Image className='rounded-md mr-4' src={ListStar} width={20} height={20} alt='List Star'></Image>

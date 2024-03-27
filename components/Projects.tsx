@@ -26,7 +26,7 @@ export default function Projects({ darkMode }: any) {
   
   return (
     <>
-        <div className='m-4 flex justify-evenly'>
+        <div className='m-4 flex flex-col lg:flex-row justify-evenly'>
             {projects.map(({title, image, description, tech}) => (
                 <div className='bg-slate-200 flex flex-col lg:w-2/5 2xl:w-2/6 items-center mb-6 rounded-md' key={title}>
                     <Image className='flex rounded-md' src={image} width={800} height={800} alt='Project Image'></Image>
