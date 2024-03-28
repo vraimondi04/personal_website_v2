@@ -3,7 +3,7 @@ import Image from 'next/image'
 import Yummy from '@/public/medias/yummy-project.png'
 import YummyTest from '@/public/medias/yummy-test.gif'
 import MembershipPortal from '@/public/medias/membership-portal.png'
-import { SiNextdotjs, SiTailwindcss, SiUnity, SiCsharp, SiGooglecloud } from "react-icons/si";
+import { SiNextdotjs, SiTailwindcss, SiUnity, SiCsharp, SiGooglecloud, SiFirebase } from "react-icons/si";
 import { a } from '@react-spring/web'
 
 export default function Projects({ darkMode }: any) {
@@ -13,7 +13,7 @@ export default function Projects({ darkMode }: any) {
         title: 'ACM Membership Portal',
         description: 'Student portal + admin dashboard to officiate membership, track participation, and provide workshop resources',
         image: MembershipPortal,
-        tech: [SiNextdotjs, SiTailwindcss, SiGooglecloud]
+        tech: [SiNextdotjs, SiTailwindcss, SiGooglecloud, SiFirebase]
     },
     {
         title: 'Yummy!',

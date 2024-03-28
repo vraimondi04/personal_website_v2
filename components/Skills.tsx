@@ -27,17 +27,18 @@ export default function Skills({ darkMode }: any) {
         { name: 'React.js' },
         { name: 'Next.js' },
         { name: 'TailwindCSS' },
+        { name: 'Firebase' },
     ]
 
     const currentlyLearning = [
         { name: 'AR Development'},
-        { name: 'React Native + Expo' },
-        { name: 'CUDA' }
+        { name: 'React-Three Fiber' },
+        { name: 'React Native + Expo' }
     ]
   
   return (
     <>
-        <div className='flex flex-col justify-center lg:items-center rounded-md bg-slate-200 lg:w-11/12 2xl:w-full m-4'>
+        <div className='flex flex-col justify-center lg:items-center rounded-md bg-slate-200 w-full lg:w-11/12 2xl:w-full m-4'>
             <div className='flex flex-col lg:flex-row gap-6 lg:gap-16 lg:pb-6 2xl:pb-4'>
                 <div className='flex flex-col ml-3'>
                     <p className="font-serif text-[#202020] font-bold text-xl lg:text-2xl 2xl:text-4xl mb-3">Languages</p>
