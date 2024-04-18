@@ -16,7 +16,7 @@ export default function Scene({ setBg, handleMode }: any) {
     const [down, setDown] = useState(false);
     const [hovered, setHovered] = useState(false);
 
-    // TODO: attempt react fiber room --> try using animations from procreate
+    // TODO: attempt react fiber room --> try using animations from procreate as world image
 
     useEffect(() => {
         document.body.style.cursor = hovered ? 'none' : ''
