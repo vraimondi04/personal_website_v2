@@ -8,6 +8,7 @@ import Projects from '@/components/Projects';
 import { Canvas } from '@react-three/fiber';
 import { useSpring } from '@react-spring/core';
 import { a } from '@react-spring/web';
+import { Portal } from '@/components/Portal';
 // import dynamic from 'next/dynamic';
 
 // // const Scene = dynamic(() => import('@/components/Scene'), {
@@ -26,6 +27,10 @@ export default function Index() {
 
   return (
     <>
+    <Canvas shadows camera={{ position: [0, 0, 10], fov: 30}}>
+      <Portal />
+    </Canvas>
+
     <a.main style={{ background } as any} className='flex flex-col lg:flex-row'>
       <Caption darkMode={darkMode} />
 
