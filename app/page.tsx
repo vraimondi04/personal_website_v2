@@ -27,14 +27,14 @@ export default function Index() {
 
   return (
     <>
-    <Canvas shadows camera={{ position: [0, 0, 10], fov: 30}}>
+    {/* <Canvas shadows camera={{ position: [0, 0, 10], fov: 30}}>
       <Portal />
-    </Canvas>
+    </Canvas> */}
 
     <a.main style={{ background } as any} className='flex flex-col lg:flex-row'>
       <Caption darkMode={darkMode} />
 
-      <Canvas className="flex flex-1 h-screen">
+      <Canvas shadows camera={{ position: [0, 0, 10], fov: 30}} className="flex flex-1 h-screen">
         <Scene setBg={set} handleMode={updateDarkMode} />
       </Canvas>
     </a.main>

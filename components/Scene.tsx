@@ -1,8 +1,7 @@
 'use client';
 import * as THREE from 'three';
 import React, { Suspense, useEffect, useState, useRef } from 'react';
-import { useFrame } from '@react-three/fiber';
-import { PerspectiveCamera, Environment, MeshTransmissionMaterial, Float, useGLTF } from '@react-three/drei';
+import { PerspectiveCamera, Environment, MeshTransmissionMaterial, Float, useGLTF, useTexture, OrbitControls } from '@react-three/drei';
 import { useSpring } from '@react-spring/core';
 import { a } from '@react-spring/three'
 
@@ -15,6 +14,7 @@ export default function Scene({ setBg, handleMode }: any) {
     const [mode, setMode] = useState(false);
     const [down, setDown] = useState(false);
     const [hovered, setHovered] = useState(false);
+    const map = useTexture('medias/Untitled_Artwork.jpg');
 
     // TODO: attempt react fiber room --> try using animations from procreate as world image
 
@@ -33,6 +33,8 @@ export default function Scene({ setBg, handleMode }: any) {
     return (
     <>
         <PerspectiveCamera makeDefault position={[0, 0, 10]} fov={75} />
+        <ambientLight intensity={0.5} />
+        <OrbitControls />
         <Suspense fallback={null}>
             <Float>
                 <a.mesh
@@ -55,6 +57,10 @@ export default function Scene({ setBg, handleMode }: any) {
             </Float>
             <Environment preset="sunset" />
         </Suspense>
+        <mesh>
+            <sphereGeometry args={[6, 64, 64]} />
+            <meshStandardMaterial map={map} side={THREE.BackSide} />
+        </mesh>
 
     </>
     )
