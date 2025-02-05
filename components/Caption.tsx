@@ -8,13 +8,13 @@ export default function Caption({ darkMode }: any) {
   
   return (
     <div className='flex flex-1 flex-col pointer-events-none justify-center items-center'>
-      <div className='flex flex-col items-center justify-center font-bold lg:text-4.5xl 2xl:text-6xl text-xl font-serif lg:ml-12'>
+      <div className='flex flex-col items-center justify-center font-bold lg:text-4xl 2xl:text-6xl text-xl font-serif lg:ml-12'>
         <p className="text-[#E8B059] lg:mb-3">{`- Hi, I'm Vincent -`}</p>
         <p className={darkMode === true ? "text-[#f0f0f0]" : "text-[#202020]"}>Software Dev +
           <span className=''>
             <TypeAnimation 
               sequence={[
-                " Wizard",
+                " Creative",
                 4000,
                 " Pokemon Trainer",
                 4000,
